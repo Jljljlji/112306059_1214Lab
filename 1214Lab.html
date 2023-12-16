@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>1214Lab</title>
+	<style>
+		.custom-button {
+			display: inline-block;
+			padding: 10px 20px;
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			margin: 5px;
+			transition: transform 0.3s;
+		}
+		.button-container {
+			text-align: center;
+		}
+		#button1 {
+			background-color: lightpink;
+			color: #fff;
+		}
+
+		#button2 {
+			background-color: violet;
+			color: #fff;
+		}
+
+		#blue {
+			background-color: #3498db;
+			color: #fff;
+		}
+
+		#green {
+			background-color: #2ecc71;
+			color: #fff;
+		}
+		#resetbg{
+			background-color: lightgrey;
+			color: #fff;
+		}
+		.custom-button:hover {
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<h1 class="button-container">Interactive Buttons</h1>
+	<div class="button-container">
+		<button class="custom-button" id="button1" onClick = "alert(firstnum);">1st button</button>
+		<button class="custom-button" id="button2" onClick = "alert(secondnum);">2nd button</button>
+		<button class="custom-button" id="blue" onClick = "document.body.style.backgroundColor = 'blue'";>blue</button>
+		<button class="custom-button" id="green" onClick = "document.body.style.backgroundColor = 'green'";>green</button>
+		<button class="custom-button" id="resetbg" onClick = "alert('Reset Background Color'); document.body.style.backgroundColor = 'white'";>Reset BG color</button>
+		<p>
+			<script>
+				var firstnum = window.prompt("Enter first number");
+				var secondnum = window.prompt("Enter second number");
+				if (firstnum<secondnum) {
+					document.write( firstnum+ '<' +secondnum )
+					document.body.style.backgroundColor = 'orange'
+				}
+				else if(firstnum>secondnum){
+					document.write( firstnum+ '>' +secondnum )
+					document.body.style.backgroundColor = 'lightblue'
+				}
+				else{
+					document.write( firstnum+ '==' +secondnum )
+					document.body.style.backgroundColor = 'lightyellow'
+				}
+			</script>
+		</div>
+
+
+	</body>
+	</html>
